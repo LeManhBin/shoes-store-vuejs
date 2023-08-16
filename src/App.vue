@@ -1,26 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import router from './routes';
+import { useUserStore } from './stores/authStore';
+import { onMounted } from 'vue'; 
+// import router from './routes';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
+  },
+  setup() {
+    const userStore = useUserStore()
+    const accessToken = localStorage.getItem("token") || null
+    
+    onMounted( async() => {
+      if(accessToken) {
+        await userStore.fetchReLogin(accessToken)
+      }
+    })
+
+
+    // router.beforeEach((to, from, next) => {
+    //   if (to.path === '/admin') {
+    //     console.log("==", role);
+    //     if (userStore.myUser.isAdmin === true) {
+    //       console.log("admin");
+    //       next('/admin');
+    //     } else {
+    //       next('/');
+    //       console.log("user");
+    //     }
+    //   } else {
+    //     next();
+    //   }
+    // })
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
