@@ -1,10 +1,11 @@
+import { BASE_URL } from "@/constants/url";
 import axios from "axios";
 import { useToast } from "vue-toastification";
 const toast = useToast();
 //Register
 export const registerUser = async (user) => {
   try {
-    const data = await axios.post("http://localhost:4000/users/regiter", user);
+    const data = await axios.post(`${BASE_URL}users/regiter`, user);
     toast.success("Register success");
     return data;
   } catch (error) {
@@ -19,7 +20,7 @@ export const registerUser = async (user) => {
 //Login
 export const loginUser = async (account) => {
   try {
-    const data = await axios.post("http://localhost:4000/login", account);
+    const data = await axios.post(`${BASE_URL}login`, account);
     toast.success("Login success");
     return data;
   } catch (error) {
@@ -29,7 +30,7 @@ export const loginUser = async (account) => {
 
 export const getInforMe = async (email) => {
   try {
-    const data = await axios.get(`http://localhost:4000/users?email=${email}`);
+    const data = await axios.get(`${BASE_URL}users?email=${email}`);
     return data;
   } catch (error) {
     console.log(error);
@@ -38,7 +39,7 @@ export const getInforMe = async (email) => {
 
 export const getAllUser = async () => {
   try {
-    const data = await axios.get(`http://localhost:4000/users`);
+    const data = await axios.get(`${BASE_URL}users`);
     return data;
   } catch (error) {
     console.log(error);
@@ -47,7 +48,7 @@ export const getAllUser = async () => {
 
 export const getUserById = async (id) => {
   try {
-    const data = await axios.get(`http://localhost:4000/users/${id}`);
+    const data = await axios.get(`${BASE_URL}users/${id}`);
     return data;
   } catch (error) {
     console.log(error);
@@ -56,7 +57,7 @@ export const getUserById = async (id) => {
 
 export const fetchDeleteUser = async (id) => {
   try {
-    const data = await axios.delete(`http://localhost:4000/users/${id}`);
+    const data = await axios.delete(`${BASE_URL}users/${id}`);
     toast.success("Delete success");
     return data;
   } catch (error) {
@@ -66,7 +67,7 @@ export const fetchDeleteUser = async (id) => {
 
 export const fetchUpdateUser = async (id, payload) => {
   try {
-    const data = await axios.put(`http://localhost:4000/users/${id}`, payload);
+    const data = await axios.put(`${BASE_URL}users/${id}`, payload);
     toast.success("Delete success");
     return data;
   } catch (error) {
