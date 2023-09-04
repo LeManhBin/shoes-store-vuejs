@@ -1,7 +1,7 @@
 <template lang="">
     <footer class="h-[400px] max-lg:h-max border-t-[1px] py-[50px] mt-[50px]  px-[50px] flex justify-evenly flex-wrap max-lg:gap-[50px] max-lg:justify-start">
         <div class="flex flex-col gap-7">
-            <img src="https://bisuth-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1657773108" alt="logo" class="w-max h-[20px] max-sm:h-[15px]">
+            <img src="https://bisuth-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1657773108" alt="logo" class="w-max h-[20px] max-sm:w-[50%]">
             <p class="font-normal text-[13px]">Sophisticated simplicity for the independent mind.</p>
             <div class="flex items-center gap-5">
                 <div class="hover:text-[#1DA1F2]">

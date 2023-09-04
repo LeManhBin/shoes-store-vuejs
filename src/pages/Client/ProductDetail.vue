@@ -1,7 +1,7 @@
 <template lang="">
     <div class="px-[50px] mt-[160px]">
-        <div class="flex gap-5">
-            <div class="flex-1">
+        <div class="flex gap-5 max-md:flex max-md:flex-col">
+            <div class="flex-1 ">
                 <img :src="productData?.thumbnail" alt="">
                 <!-- <div class="flex items-center justify-between gap-2 w-full mt-5">
                     <img :src="productData?.thumbnail" alt="" class="w-[18%]">

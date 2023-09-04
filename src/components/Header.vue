@@ -4,7 +4,7 @@
         <div class="lg:hidden">
             <AlignLeftOutlined :style="{fontSize: '20px', cursor: 'pointer'}" @click="handleToggleNavbar"/>
         </div>
-        <img src="https://bisuth-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1657773108" alt="logo" class="w-max h-[20px] max-sm:h-[15px] cursor-pointer" @click="goHomePage">
+        <img src="https://bisuth-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1657773108" alt="logo" class="w-max h-[20px] max-sm:w-[40%] cursor-pointer" @click="goHomePage">
         <div v-if="isOpenNav" class="fixed z-10 inset-0 bg-black opacity-70" @click="handleToggleNavbar"></div>
         <ul :class="`flex items-center gap-[40px] max-lg:gap-0 font-semibold max-lg:flex-col max-lg:items-start max-lg:absolute z-20 max-lg:bg-white max-lg:top-0 max-lg:w-[320px] max-[320px]:w-[90%] max-lg:h-screen ease-in-out duration-300 ${isOpenNav ? 'max-lg:left-0' : 'max-lg:left-[-100%]'}`">
             <li class="flex items-center lg:hidden max-lg:border max-lg:w-full">
