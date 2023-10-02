@@ -1,9 +1,12 @@
 import { defineStore } from "pinia";
 import { useToast } from "vue-toastification";
 const toast = useToast();
+const checkLogin = JSON.parse(localStorage.getItem("isLogged"));
 export const useCartStore = defineStore("cartStore", {
   state: () => ({
-    cartItems: JSON.parse(localStorage.getItem("cartItems")) || [],
+    cartItems: checkLogin
+      ? JSON.parse(localStorage.getItem("cartItems")) || []
+      : [],
   }),
   actions: {
     addToCart(payload) {

@@ -13,7 +13,7 @@
                     <LogoutOutlined :style="{fontSize: '20px', cursor: 'pointer'}" />
                     LOGOUT
                 </span>
-                <span v-if="!isLogin" class="w-[40%] py-[15px] px-[10px] font-semibold flex justify-center gap-2 border-r " @click="goLogin">
+                <span v-else class="w-[40%] py-[15px] px-[10px] font-semibold flex justify-center gap-2 border-r " @click="goLogin">
                     <LoginOutlined :style="{fontSize: '20px', cursor: 'pointer'}"/>
                     LOGIN
                 </span>
@@ -41,7 +41,7 @@
             <div>
                 <SearchOutlined :style="{fontSize: '20px', cursor: 'pointer'}" @click="handleToggleSearch"/>
             </div>
-            <div class="max-lg:hidden" @click="goProfilePage">
+            <div v-if="isLogin" class="max-lg:hidden" @click="goProfilePage">
                 <UserOutlined :style="{fontSize: '20px', cursor: 'pointer'}"/>
             </div>
             <div class="max-lg:hidden">
@@ -53,8 +53,9 @@
             </div>
             <div class="max-lg:hidden">
                 <LogoutOutlined v-if="isLogin" :style="{fontSize: '20px', cursor: 'pointer'}" @click="handleLogOut"/>
+                <button v-else class="px-[10px] py-[5px] bg-black text-white text-[14px]" @click="goLogin">LOGIN</button>
             </div>
-            <button v-if="!isLogin" class="max-lg:hidden px-[10px] py-[5px] bg-black text-white text-[14px]" @click="goLogin">LOGIN</button>
+           
         </div>
     </header>
     <CardSide :handleToggleCart="handleToggleCart" :isCart="isCart" :quantityProductInCart="quantityProductInCart" @closeCartSide="handleCloseCartSide"/>

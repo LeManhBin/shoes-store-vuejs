@@ -1,6 +1,6 @@
 <template lang="">
     <div class="mt-[160px] px-[100px] flex items-start gap-5">
-        <div class="flex-[1] bg-slate-400 flex items-center gap-3">
+        <div class="flex-[1] flex items-center gap-3">
             <!-- <img src="" alt="avatar" class="w-10 h-10 bg-black rounded-full"> -->
             <span src="" class="w-10 h-10 bg-gray-500 flex text-center justify-center text-[24px] font-bold rounded-full">B</span>
             <div class="">
