@@ -5,7 +5,7 @@ const toast = useToast();
 //Register
 export const registerUser = async (user) => {
   try {
-    const data = await axios.post(`${BASE_URL}users/regiter`, user);
+    const data = await axios.post(`${BASE_URL}users/register`, user);
     toast.success("Register success");
     return data;
   } catch (error) {

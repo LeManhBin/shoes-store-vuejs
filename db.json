@@ -76,6 +76,20 @@
       "name": "mạnh bin",
       "isAdmin": true,
       "id": 13
+    },
+    {
+      "email": "abcde@gmail.com",
+      "password": "$2a$10$C3GLgq8yUBntvfiLuxvlx.Jx2lagNb7sAo6CMf7kpF/bRNto4oMS6",
+      "name": "Lê Mạnh Bin",
+      "isAdmin": false,
+      "id": 14
+    },
+    {
+      "email": "llemanhbinvcvc@gmail.com",
+      "password": "$2a$10$xA5JbMcMu.UEM5HrFXJIf.Hg05aGQKQ3g9kHLjvjmw0MEnd5XGjKS",
+      "name": "Lê Mạnh Bin nháp",
+      "isAdmin": false,
+      "id": 15
     }
   ],
   "products": [
